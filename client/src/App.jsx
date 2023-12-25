@@ -14,7 +14,7 @@ import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import { Home, CreatePost, PublicPage, SignUpPage, SignInPage, UserPostsPage, UserLikedPosts } from "./pages";
 import { NavBar } from "./components";
 
-const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
+const clerkPubKey = pk_test_ZmVhc2libGUtZ3VpbmVhLTg3LmNsZXJrLmFjY291bnRzLmRldiQ
 
 
 function ClerkProviderWithRoutes() {
