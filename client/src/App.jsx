@@ -33,15 +33,10 @@ function ClerkProviderWithRoutes() {
           path="/account"
           element={
           <>
-            <SignedIn>
               <NavBar/>
               <main className='sm:p-8 px-4 py-8 w-full bg-gray-900 min-h-[calc(100vh-73px)]'>
                 <Home />
               </main>
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
           </>
           }
         />
@@ -49,15 +44,10 @@ function ClerkProviderWithRoutes() {
           path="/create-post"
           element={
           <>
-            <SignedIn>
               <NavBar />
               <main className='sm:p-8 px-4 py-8 w-full bg-gray-900 min-h-[calc(100vh-73px)]'>
                 <CreatePost />
               </main>
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
           </>
           }
         />
@@ -65,15 +55,10 @@ function ClerkProviderWithRoutes() {
           path="/my-post"
           element={
           <>
-            <SignedIn>
               <NavBar />
               <main className='sm:p-8 px-4 py-8 w-full bg-gray-900 min-h-[calc(100vh-73px)]'>
                 <UserPostsPage />
               </main>
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
           </>
           }
         />
@@ -82,15 +67,10 @@ function ClerkProviderWithRoutes() {
           path="/my-likes"
           element={
           <>
-            <SignedIn>
               <NavBar />
               <main className='sm:p-8 px-4 py-8 w-full bg-gray-900 min-h-[calc(100vh-73px)]'>
                 <UserLikedPosts />
               </main>
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
           </>
           }
         />
