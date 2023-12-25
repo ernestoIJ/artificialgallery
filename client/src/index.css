@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+@media screen and (min-width: 480px) {
+  .card:nth-child(7n + 1) {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+  }
+}
+
+.prompt::-webkit-scrollbar {
+  width: 5px;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+  background-color: #666e75;
+  border-radius: 5px;
+}
+
+.hover-effect {
+  @apply shadow-[inset_0_0_0_0_#54b3d6] mr-[-0.25rem] ml-[-0.25rem] hover:shadow-[inset_100px_0_0_0_#6469ff] hover:text-[white];
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* The keyframes that define the vertical scrolling effect */
+@keyframes verticalScroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+    /* adjust this value based on your actual content height */
+  }
+}
+
+/* The container that hides the overflow */
+.vertical-scroll-container {
+  box-shadow: 0 5px 50px 5px#6469ff;
+  overflow-y: hidden;
+  position: relative;
+  /* Ensures the absolute positioning of children is relative to this container */
+  max-height: 60vh;
+  /* Set a fixed height for your container */
+  width: 100%;
+}
+
+/* The content that scrolls infinitely */
+.vertical-scroll-content {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  display: grid;
+  /* flex-direction: column; */
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  width: 100%;
+  gap: 1rem;
+  animation: verticalScroll 30s linear infinite;
+}
+
+.vertical-scroll-content img {
+  box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
+    /* Adjust color and spread for desired effect */
+    0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition for scaling */
+}
+
+.vertical-scroll-content img:hover {
+  transform: scale(1.05);
+  /* Scales up the image slightly on hover for a 3D effect */
+}
