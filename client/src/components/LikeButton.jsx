@@ -9,7 +9,7 @@ function LikeButton({ postId, userId }) {
   useEffect(() => {
     const fetchLikes = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/v1/post/${postId}`);
+        const response = await fetch(`https://artificialgallery-api.vercel.app/api/v1/post/${postId}`);
         const data = await response.json();
         if (response.ok) {
           const isLiked = data.data.likes ? data.data.likes.includes(userId) : false;
@@ -32,7 +32,7 @@ function LikeButton({ postId, userId }) {
    }
 
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/post/${postId}/like`, {
+      const response = await fetch(`https://artificialgallery-api.vercel.app/api/v1/post/${postId}/like`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

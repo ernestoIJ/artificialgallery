@@ -26,7 +26,7 @@ function UserPostsPage() {
          setLoading(true);
 
          try {
-            const response = await fetch("http://localhost:8080/api/v1/post", {
+            const response = await fetch("https://artificialgallery-api.vercel.app/api/v1/post", {
                method: "GET",
                headers: {
                   "Content-Type": "application/json",
@@ -52,7 +52,7 @@ function UserPostsPage() {
 
    const handleDeletePost = async (postId) => {
       try {
-         const response = await fetch(`http://localhost:8080/api/v1/post/${postId}`, {
+         const response = await fetch(`https://artificialgallery-api.vercel.app/api/v1/post/${postId}`, {
             method: "DELETE",
             headers: {
                "Content-Type": "application/json",
